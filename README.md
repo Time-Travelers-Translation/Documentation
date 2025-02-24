@@ -2,7 +2,44 @@
 Documents every external resource and various other information for this fan translation.
 
 ## Code Patches
-All related files for code patching to be found [here](https://mega.nz/folder/JpJTgQCJ#0vigu87XxWC-uqVBkvkceQ).
+Our code patches as an .asm file to be found [here](https://mega.nz/folder/p54ynbgJ#K05B3nJNTHuUBX4td8l7OQ).
 
 We made code patches to the game to patch texts located inside the code.bin, patch the cpk loading routine, and patch all manner of line and image positions.
-To apply the code changes in the .asm file we used `armips.exe` by Kingcom [here](https://github.com/Kingcom/armips).
+To apply the code changes in the .asm file we used `armips.exe` by Kingcom [here](https://github.com/Kingcom/armips) or [here](https://mega.nz/folder/g0QXhZrK#xpE0pwrGkRTp1j068CclBQ).
+
+For research in general, we used IDA 7.7 and its features to output pseudo code (F5) for certain routines.
+And for some of the assembly instructions in the .asm file we used the [Capstone Dis-/Assembler](https://shell-storm.org/online/Online-Assembler-and-Disassembler/) to get their binary representation, since armips doesn't support all of the ARM instructions.
+
+## File Patches
+We made patches to various archives, images, fonts, texts, scripts, and scene descriptions. Most of the relevant tools, that either work with those files or modify them, we created ourselves. Those tools will be referenced in later parts of this documentation, where applicable.
+
+To extract cpk files, we used a QuickBMS script [here](https://mega.nz/folder/osZUhSCC#NMRfYlOjuJgNBCUAJcXxVw).<br>
+Files are put back into a cpk for the patch by [TimePatchApply](https://github.com/Time-Travelers-Translation/TimePatchApply).
+
+To create a patch file for distribution, we created [TimePatchCreate](https://github.com/Time-Travelers-Translation/TimePatchCreate).<br>
+And to inspect the patched files after they were distributed, one can use [TimePatchExtract](https://github.com/Time-Travelers-Translation/TimePatchExtract).
+
+For most basic operations, like opening all sorts of archives, images, or quickly modifying them, we used an older version of [Kuriimu2](https://mega.nz/folder/hpoAyCSb#KmQbdjMhptPY2JWruBrMRQ).<br>
+On newer versions, some images were not properly encoded and either blacked out in-game or looked distorted.
+
+For modifying the menu layouts, we used [Level5RessourceEditor](https://github.com/onepiecefreak3/level5ressourceeditor).<br>
+While this tool also originated from this project, it can be used by pretty much any 3DS Level5 game (and maybe other platforms too) and long predated this organization. It is therefore kept in its original repository.
+
+##Translation
+This game was largely translated by hand, as it started way before modern machine translation tools and AI existed.<br>
+However, there are some parts that were only translated in 2024 and 2025, shortly before release. At that time the translators of this project were already occupied by other projects or with their personal life, which left those tiny parts to people that were only rudimentary knowledgable in the japanese language.
+
+For example, the movies between chapters were OCR'ed and then translated by a combination of ChatGPT and DeepL for a basic understanding. Based on the context of the movie and perspectives, those translations were then either completely rewritten or adjusted as needed to fit space and tone.
+
+We used [ScanDoc](https://2ocr.com/online-ocr-japanese/) and [SljFaq](https://kanji.sljfaq.org/draw-old.html) for OCR.
+
+We store our translation on a Google Spreadsheet and tools like [TimeTravelersSheetBridge](https://github.com/Time-Travelers-Translation/TimeTravelersSheetBridge) and [ScnNavigator](https://github.com/Time-Travelers-Translation/ScnNavigator) directly read from and write to those sheets. This allowed us to work on all of the text simultaniously from anywhere that had internet access.
+
+If you want to create your own translation, we recommend you copy our [spreadsheet](https://docs.google.com/spreadsheets/d/1TRyRSCSVl4nOwI7Gvm89FAiVoWteFzo_A96ZSkyVnXA/edit?usp=sharing) to be able to use our tools properly and manage your team.
+
+##Font Patches
+We decided to deploy a new font for this game mainly for space efficienty, but also because the latin glyphs of the original font didn't look good.<br>
+We created a new font from "Roboto Condensed" with a very old version of [Kuriimu2 Wpf](https://mega.nz/folder/w1gQjBjT#BMYApH-FWWmgG1IfOwISNg) that had basic font support.<br>
+With this, open a .xf from the game, click "Open Font Generator", load one of the font profiles [here](https://mega.nz/folder/tlwlWJgL#nKMq27NJNj7VfJSPMIW9XQ), adjust it to your needs, click "Generate", and then use the save icons at the top left to persist the new .xf.
+
+We then had additional, very game-specific requirements for the font, that were not intended for that version's font support and were instead realized by [FontPatcher](https://github.com/Time-Travelers-Translation/FontPatcher).
