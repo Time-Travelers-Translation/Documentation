@@ -2,7 +2,7 @@
 Documents every external resource and various other information for this fan translation.
 
 ## Code Patches
-Our code patches as an .asm file to be found [here](https://mega.nz/folder/p54ynbgJ#K05B3nJNTHuUBX4td8l7OQ).
+Our code patches were written as ARM assembly instructions as an [.asm file](https://mega.nz/folder/p54ynbgJ#K05B3nJNTHuUBX4td8l7OQ).
 
 We made code patches to the game to patch texts located inside the code.bin, patch the cpk loading routine, and patch all manner of line and image positions.
 To apply the code changes in the .asm file we used `armips.exe` by Kingcom [here](https://github.com/Kingcom/armips) or [here](https://mega.nz/folder/g0QXhZrK#xpE0pwrGkRTp1j068CclBQ).
@@ -13,7 +13,7 @@ And for some of the assembly instructions in the .asm file we used the [Capstone
 ## File Patches
 We made patches to various archives, images, fonts, texts, scripts, and scene descriptions. Most of the relevant tools, that either work with those files or modify them, we created ourselves. Those tools will be referenced in later parts of this documentation, where applicable.
 
-To extract cpk files, we used a QuickBMS script [here](https://mega.nz/folder/osZUhSCC#NMRfYlOjuJgNBCUAJcXxVw).<br>
+To extract cpk files, we used a [QuickBMS script](https://mega.nz/folder/osZUhSCC#NMRfYlOjuJgNBCUAJcXxVw).<br>
 Files are put back into a cpk for the patch by [TimePatchApply](https://github.com/Time-Travelers-Translation/TimePatchApply).
 
 To create a patch file for distribution, we created [TimePatchCreate](https://github.com/Time-Travelers-Translation/TimePatchCreate).<br>
@@ -25,7 +25,7 @@ On newer versions, some images were not properly encoded and either blacked out 
 For modifying the menu layouts, we used [Level5RessourceEditor](https://github.com/onepiecefreak3/level5ressourceeditor).<br>
 While this tool also originated from this project, it can be used by pretty much any 3DS Level5 game (and maybe other platforms too) and long predated this organization. It is therefore kept in its original repository.
 
-##Translation
+## Translation
 This game was largely translated by hand, as it started way before modern machine translation tools and AI existed.<br>
 However, there are some parts that were only translated in 2024 and 2025, shortly before release. At that time the translators of this project were already occupied by other projects or with their personal life, which left those tiny parts to people that were only rudimentary knowledgable in the japanese language.
 
@@ -37,9 +37,9 @@ We store our translation on a Google Spreadsheet and tools like [TimeTravelersSh
 
 If you want to create your own translation, we recommend you copy our [spreadsheet](https://docs.google.com/spreadsheets/d/1TRyRSCSVl4nOwI7Gvm89FAiVoWteFzo_A96ZSkyVnXA/edit?usp=sharing) to be able to use our tools properly and manage your team.
 
-##Font Patches
+## Font Patches
 We decided to deploy a new font for this game mainly for space efficienty, but also because the latin glyphs of the original font didn't look good.<br>
 We created a new font from "Roboto Condensed" with a very old version of [Kuriimu2 Wpf](https://mega.nz/folder/w1gQjBjT#BMYApH-FWWmgG1IfOwISNg) that had basic font support.<br>
-With this, open a .xf from the game, click "Open Font Generator", load one of the font profiles [here](https://mega.nz/folder/tlwlWJgL#nKMq27NJNj7VfJSPMIW9XQ), adjust it to your needs, click "Generate", and then use the save icons at the top left to persist the new .xf.
+With this, open a .xf from the game, click "Open Font Generator", load one of the [font profiles](https://mega.nz/folder/tlwlWJgL#nKMq27NJNj7VfJSPMIW9XQ), adjust it to your needs, click "Generate", and then use the save icons at the top left to persist the new .xf.
 
 We then had additional, very game-specific requirements for the font, that were not intended for that version's font support and were instead realized by [FontPatcher](https://github.com/Time-Travelers-Translation/FontPatcher).
