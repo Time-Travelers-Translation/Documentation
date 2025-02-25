@@ -43,3 +43,32 @@ We created a new font from "Roboto Condensed" with a very old version of [Kuriim
 With this, open a .xf from the game, click "Open Font Generator", load one of the [font profiles](https://mega.nz/folder/tlwlWJgL#nKMq27NJNj7VfJSPMIW9XQ), adjust it to your needs, click "Generate", and then use the save icons at the top left to persist the new .xf.
 
 We then had additional, very game-specific requirements for the font, that were not intended for that version's font support and were instead realized by [FontPatcher](https://github.com/Time-Travelers-Translation/FontPatcher).
+
+## Script Editing
+To edit the games script format .stb (short for Storyboard), we use [Backstab](https://github.com/Time-Travelers-Translation/Backstab) originally by `Neobeo` and adjusted by us to allow for injection.
+
+Storyboards are usually a list of function calls and arguments.<br>
+First a storyboard sets up all the assets, like models, images, animations, texts, and so on. They then execute showing those assets in a given time frame, denoted by time stamps like so `time = [Number];`.<br>
+As far as we understand, those are frame counts, and reaching that time stamp will immediately dispose of assets from the previous time stamp and load in assets setup for the next time stamp.
+
+As the name `Storyboard` implies, it's easier to think of those files as a list of instructions key-framed to certain time stamps, instead of a scripting language and code.
+
+## Image Editing
+To open and inject images, we used an older version of Kuriimu2, referred in [File Patches](https://github.com/Time-Travelers-Translation/Documentation?tab=readme-ov-file#file-patches).
+
+We also created an [ImageExtractor](https://github.com/Time-Travelers-Translation/ImageExtractor), that can extract all image assets referenced by storyboards of a given chapter.<br>
+This way, we could extract all image assets of the chapter we currently worked on and could filter out the image assets that needed translation.<br>
+This tool will come in handy for other languages, since we didn't translate all image assets with text on them, as some were either too complex, already fit their purpose, or were already in english.
+
+To edit images after extraction, we used Adobe Photoshop 25.9 and GIMP 2.10.8.
+
+We offer all of our GIMP and PS work files [here](https://mega.nz/folder/o9YkCTab#IvQIuCt96syOnHHSRCy3tQ). All of them work on a cleaned base image and with proper layers to make sure text can easily be updated. Along with those work files, we also provide all of the fonts used in them, so they can be installed for use in those work files.
+
+## Movie Editing
+To convert moflex files into mp4, we used [Mobius](https://mega.nz/folder/loYnzCoJ#rpMaYRIw6MXutoKnHLGWJQ) by `Neobeo`. It has the best quality of the available decoding tools for moflex.
+
+We edited the movies with Adobe After Effects 25.1 and also provide our full work files for them [here](https://mega.nz/folder/ksZTVIoC#KWfYAP2Ijvb_idGn144jqg).
+
+To convert edited video files back, we used Nintendo's official Mobiclip Multicore Encoder. A working version with instructions can be found on [Internet Archive](https://archive.org/details/3ds-moflex-encoder-tools) or [here](https://mega.nz/folder/sog2UDTY#nckZ1qpSn6Ul3PpJhAKnVA).
+
+We also provide our [mograph](https://mega.nz/folder/s9ggDQKB#DFEOa_m3QOezLeiBdMQ4DA)'s for each video file. However, you have to adjust the input and output nodes, as they reference absolute paths on your local machine.
