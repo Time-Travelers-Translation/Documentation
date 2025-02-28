@@ -1,6 +1,8 @@
 # Documentation
 Documents every external resource and various other information for this fan translation.
 
+All resources will be explained and referenced in the sections below. For a full collection of all the resources explaiend below, navigate [here](https://mega.nz/folder/YxZj3BxB#ID5ADOkYwHCIceplQi_gpA).
+
 ## Code Patches
 Our code patches were written as ARM assembly instructions as an [.asm file](https://mega.nz/folder/p54ynbgJ#K05B3nJNTHuUBX4td8l7OQ).
 
