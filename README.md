@@ -71,10 +71,8 @@ We created one .otf font ourselves on basis of the Time Travelers logo, called "
 ## Movie Editing
 To convert moflex files into mp4, we used [Mobius](https://mega.nz/folder/loYnzCoJ#rpMaYRIw6MXutoKnHLGWJQ) by `Neobeo`. It has the best quality of the available decoding tools for moflex.
 
-We edited the movies with Adobe After Effects 25.1 and also provide our full work files for them [here](https://mega.nz/folder/Z4xWRJ7R#KWfYAP2Ijvb_idGn144jqg).
+We edited the movies with Adobe After Effects 25.1 and also provide our full work files for them [here](https://mega.nz/folder/Z4xWRJ7R#KWfYAP2Ijvb_idGn144jqg), along with their respective mograph for use in Nintendo's Mobiclip Multicore Encoder.
 
 Along with those work files, we also provide all of the fonts used in them [here](https://mega.nz/folder/B45yjYTQ#wdFuttdV1jz8XsP3v9UG4g), so they can be installed for use in those work files.
 
 To convert edited video files back, we used Nintendo's official Mobiclip Multicore Encoder. A working version with instructions can be found on [Internet Archive](https://archive.org/details/3ds-moflex-encoder-tools) or [here](https://mega.nz/folder/sog2UDTY#nckZ1qpSn6Ul3PpJhAKnVA).
-
-We also provide our [mograph](https://mega.nz/folder/s9ggDQKB#DFEOa_m3QOezLeiBdMQ4DA)'s for each video file. However, you have to adjust the input and output nodes, as they reference absolute paths on your local machine.
